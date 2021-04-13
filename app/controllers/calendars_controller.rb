@@ -36,7 +36,7 @@ class CalendarsController < ApplicationController
         today_plans.push(plan.plan) if plan.date == @todays_date + x
       end
 
-      wday_num = Date.today.wday[x + 1]#wdayメソッドを用いて取得した数値
+      wday_num = Date.today.wday + x#wdayメソッドを用いて取得した数値
       if wday_num >= 7
         wday_num = wday_num -7
       end
